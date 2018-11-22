@@ -15,7 +15,13 @@ run image-to-gcode.ry to start the program
 * **Feed Rate (units per minute)** The feed rate for other parts of the path
 * **Plunge Feed Rate (units per minute)** The feed rate for the initial plunge movement
 * **Spindle Speed (RPM)**
-* **Scan Pattern**
+* **Scan Pattern** Possible scan patterns are:
+    - Rows
+    - Columns
+    - Rows, then Columns
+    - Columns, then Rows
+    - Rows Object
+    - Columns Object
 * **Scan Direction**
     - Positive: Start milling at a low X or Y axis value, and move towards a high X or Y axis value
     - Negative: Start milling at a high X or Y axis value, and move towards a low X or Y axis value
@@ -36,7 +42,8 @@ run image-to-gcode.ry to start the program
     - 60 degree
     - 90 degree
 * **Tool Diameter 2 (units)**
-* **Angle of tool 2**
+* **Angle of tool 2**  
+![tool](https://user-images.githubusercontent.com/8062959/48924304-9aee2100-eec7-11e8-9b97-985f5bf5ba8e.jpg)  
 * **Lace Bounding** This controls whether areas that are relatively flat along a row or column are skipped. This option only makes sense when both rows and columns are being milled. Possible bounding options are:
     - None: Rows and columns are both fully milled.
     - Secondary: When milling in the second direction, areas that do not strongly slope in that direction are skipped.
@@ -48,7 +55,8 @@ run image-to-gcode.ry to start the program
 * **Min delta of RMF mode (units)** 
 * **Previous offset (rmf)(units, 0=no roughing)** 
 * **Roughing offset (units, 0=no roughing)** Image-to-gcode can optionally perform rouging passes. The depth of successive roughing passes is given by “Roughing depth per pass”. For instance, entering 0.2 will perform the first roughing pass with a depth of 0.2, the second roughing pass with a depth of 0.4, and so on until the full Depth of the image is reached. No part of any roughing pass will cut closer than Roughing Offset to the final part.
-* **Roughing depth per pass (units)** 
+* **Roughing depth per pass (units)**  
+![roughingoffset_sm](https://user-images.githubusercontent.com/8062959/48924090-9e80a880-eec5-11e8-8608-a015afdc7cf2.jpg)  
 * **Previous stepover (pixels)** 
 * **Previous tool Diameter (units)** 
 * **Previous tool Type** 
