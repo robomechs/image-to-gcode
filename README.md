@@ -1,7 +1,7 @@
 ## image-to-gcode
 # Image-to-gcode for windows and linux without linuxcnc
 The program converts the Z-depth map image (.png .jpg .gif) to the Gcode.
-
+![2018-11-23_01-30-13](https://user-images.githubusercontent.com/8062959/48923446-a89fa880-eebf-11e8-8d07-e4cf2a294145.png)
 
 # About
 This repository is a development of a well-known Linuxcnc application: [image-to-gcode](http://www.linuxcnc.org/docs/2.4/html/gui_image-to-gcode.html).  
