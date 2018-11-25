@@ -3193,6 +3193,8 @@ def ui(im, nim, im_name):
     if status.get() == -1:
         raise SystemExit(_("image-to-gcode: User pressed cancel"))
 
+    if not os.path.isdir(settingsDir):
+	os.makedirs(settingsDir)
     rc = settingsDir+"settings.image2gcoderc"
     pickle.dump(defaults, open(rc, "wb"))
     
