@@ -3231,6 +3231,8 @@ def main():
         nim = numarray.fromstring(im.tostring(),'UInt8',-1).astype('Float32')
     nim = nim.reshape(w,h)
 
+    options = ui(im, nim, im_name)
+
     if printToFile:
         newDir = "nc_output"
         fileExtention = ".nc"
@@ -3242,8 +3244,6 @@ def main():
             sys.stdout = open(newDir+"\\"+finalFileName, 'w')
         else:
             sys.stdout = open(newDir+"/"+finalFileName, 'w')     
-    
-    options = ui(im, nim, im_name)
 
     prn_detal = options['detail_of_comments']
     step = options['pixelstep']
