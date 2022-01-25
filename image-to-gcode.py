@@ -678,8 +678,8 @@ class Converter:
             w1 = w + tw
             h1 = h + th
             nim1 = numarray.zeros((w1, h1), dtype=numarray.float32) + image.min()
-            nim1[tw/2:tw/2+w, th/2:th/2+h] = image
-            image = numarray.zeros((w,h), "Float32")
+            nim1[tw//2:tw//2+w, th//2:th//2+h] = image
+            image = numarray.zeros((w,h), dtype=numarray.float32)
             for j in range(0, w):
                 progress(j,w)
                 for i in range(0, h):
